@@ -5,12 +5,12 @@ from dateutil.relativedelta import relativedelta
 
 
 def calculate_edad(*args):
-try:
-fecha_nacimiento = datetime.strptime(str(input_text.get()), "%d/%m/%Y")
-edad_calculada = relativedelta(datetime.now(), fecha_nacimiento)
-edad.set(f"{edad_calculada.years} aÃ±os, {edad_calculada.months} meses y {edad_calculada.days} dÃ­as")
-except ValueError:
-pass
+    try:
+        fecha_nacimiento = datetime.strptime(str(input_text.get()), "%d/%m/%Y")
+        edad_calculada = relativedelta(datetime.now(), fecha_nacimiento)
+        edad.set(f"{edad_calculada.years} aÃ±os, {edad_calculada.months} meses y {edad_calculada.days} dÃ­as")
+    except ValueError:
+        pass
 root = Tk()
 root.title("Calculando edad")
 
@@ -32,7 +32,7 @@ ttk.Label(mainframe, text="fecha de nacimiento dd/mm/aaaa").grid(column=2, row=1
 ttk.Label(mainframe, text="usted tiene").grid(column=1, row=2, sticky=E)
 
 for child in mainframe.winfo_children():
-child.grid_configure(padx=5, pady=5)
+    child.grid_configure(padx=5, pady=5)
 
 input_text_entry.focus()
 root.bind("<Return>", calculate_edad)
