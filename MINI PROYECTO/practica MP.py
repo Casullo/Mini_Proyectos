@@ -1,35 +1,67 @@
-
 import tkinter as tk
-# from lista comidas import *
-# main frame
 
+ventana = tk.Tk()
+ventana.title("COMILANDIA")
+ventana.iconbitmap("comil.ico")
+ventana.geometry("600x400")
+ventana.config(bg="green")
+def casera():
+    ventana1 = tk.Frame()
+    ventana1.config(bg="green")
+    etiq1 = tk.Label(ventana1,text= "comida 1",bg="yellow", font=("Arial", 8)).grid(row=2, column=1, pady=10)
+    texto1= tk.Entry(ventana1,bg="grey").grid(row=2, column=2, padx=5)
+    etiq2 = tk.Label(ventana1,text= "comida 2",bg="yellow", font=("Arial", 8)).grid(row=3, column=1,pady=10)
+    texto2 = tk.Entry(ventana1,bg="grey").grid(row=3, column=2, padx=5)
+    etiq3 = tk.Label(ventana1,text= "comida 3",bg="yellow", font=("Arial", 8)).grid(row=4, column=1,pady=10)
+    texto3= tk.Entry(ventana1,bg="grey").grid(row=4, column=2,padx=5)
+    ventana1.pack()
+    
+def vip():
+    ventana2 = tk.Frame()
+    ventana2.config(bg="green")
+    etiq1 = tk.Label(ventana2,text= "comida 1",bg="yellow", font=("Arial", 8)).grid(row=2, column=1)
+    texto1= tk.Entry(ventana2,bg="grey").grid(row=2, column=2, padx=10)
+    etiq2 = tk.Label(ventana2,text= "comida 2",bg="yellow", font=("Arial", 8)).grid(row=3, column=1)
+    texto2 = tk.Entry(ventana2,bg="grey").grid(row=3, column=2, padx=10)
+    etiq3 = tk.Label(ventana2,text= "comida 3",bg="yellow", font=("Arial", 8)).grid(row=4, column=1)
+    texto3= tk.Entry(ventana2,bg="grey").grid(row=4, column=2, padx=10)
+    ventana2.pack()
+def veg():
+    ventana3 = tk.Frame()
+    ventana3.config(bg="green")
+    etiq1 = tk.Label(ventana3,text= "comida 1",bg="yellow", font=("Arial", 8)).grid(row=2, column=1)
+    texto1= tk.Entry(ventana3,bg="grey").grid(row=2, column=2)
+    etiq2 = tk.Label(ventana3,text= "comida 2",bg="yellow", font=("Arial", 8)).grid(row=3, column=1)
+    texto2 = tk.Entry(ventana3,bg="grey").grid(row=3, column=2)
+    etiq3 = tk.Label(ventana3,text= "comida 3",bg="yellow", font=("Arial", 8)).grid(row=4, column=1)
+    texto3= tk.Entry(ventana3,bg="grey").grid(row=4, column=2)
+    ventana3.pack()
 
+barra_menu = tk.Menu(ventana)
+ventana.config(menu=barra_menu)
 
-Raiz = tk.Tk()
-Raiz.title('COMILANDIA')
-Raiz.iconbitmap("comil.ico")
-Raiz.geometry('600x600')
-Raiz.resizable(1,1)
-Raiz.config(bg="green")
-# barra menu
-barra_menu = tk.Menu(Raiz)
-Raiz.config(menu=barra_menu)
-# tres menu en cascada de comidas
 menu_comidas = tk.Menu(barra_menu)
-barra_menu.add_cascade(label ='Menu Comidas', menu=menu_comidas)
-menu_comidas.add_cascade(label= 'Comidas Caseras')
-menu_comidas.add_cascade(label ='Comidas Gourmet')
-menu_comidas.add_cascade(label ='Comidas Vegetarianas')
+barra_menu.add_cascade(label ='Menu Comidas', font=("Arial", 8), menu=menu_comidas)
+
+menu_comidas.add_command(label= "Comidas Caseras", font=("Arial", 8),command=casera)
+menu_comidas.add_command(label ="Comidas Gourmet", font=("Arial", 8),command=vip)
+menu_comidas.add_command(label ="Comidas Vegetarianas", font=("Arial", 8),command=veg)
+
+ventana.mainloop()
+
+
+
+
+# barra menu
+
 
 # etiquetas, entradas y funsion
-etiq1 = tk.Label(Raiz,text= "comida 1",bg="yellow")
-etiq2 = tk.Label(Raiz,text= "comida 2",bg="yellow")
-etiq3 = tk.Label(Raiz,text= "comida 3",bg="yellow")
 
 
-texto1= tk.Entry(Raiz,bg="grey")
-texto2 = tk.Entry(Raiz,bg="grey")
-texto3= tk.Entry(Raiz,bg="grey")
+
+
+
+
 
 
 
@@ -39,21 +71,16 @@ texto3= tk.Entry(Raiz,bg="grey")
 # etiq3.place(x=10,y=90, width=1000, height=30)
 
 
-texto1.place(x=120,y=10, width=50,height=30)
-texto2.place(x=120,y=50,width=50,height=30)
-texto3.place(x=120,y=120, width=50)
+# texto1.place(x=120,y=10, width=50,height=30)
+# texto2.place(x=120,y=50,width=50,height=30)
+# texto3.place(x=120,y=120, width=50)
 
 
 
+# etiq1.pack()
+# etiq2.pack()
+# etiq3.pack()
 
-
-
-etiq1.pack(pady=6)
-etiq2.pack(pady=6)
-etiq3.pack(pady=6)
-texto1.pack(pady=6)
-texto2.pack(pady=6)
-texto3.pack(pady=6)
 # nuevo frame caseras
 # framecomidas=tk.Frame(Raiz, bg="blue")
 # framecomidas.config(width="400", height="300")
@@ -90,5 +117,5 @@ texto3.pack(pady=6)
 # one.grid(column=0, row=3)
 
 
-Raiz.mainloop()
+
 
