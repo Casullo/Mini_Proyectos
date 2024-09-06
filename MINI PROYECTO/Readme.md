@@ -5,9 +5,10 @@ COMILANDIA
 ## integrantes del grupo:
 
 - Hiemur Nazzer 
-- Alvares Matias
+- Alvarez Matias
 - Casullo D. Sebastian
 - Pokorasky Gabriel
+- Raquel Maria
 ## stack de tecnologias:
 
 - [python](https://www.python.org/)
