@@ -20,7 +20,7 @@ COMILANDIA
 
 ## video demostrativo
 
-- [Video](https://www.python.org/)
+- [Video](https://www.youtube.com/watch?v=b--pjh2llmU)
 
 ## instrucciones para ejecutar el proyecto
 
